@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+<header class="row bg-black d-flex align-items-center">
+    <div class="col-md-2 text-center">
+        <img src="{% static 'portfolio/icon2.jpg' %}" alt="">
+    </div>
+
+    <div class="col-md-10 my-auto text-center">
+        <h1><strong>Matias Serra</strong></h1>
+        <h3>Hola!</h3>
+        <p>Soy Matías, un apasionado estudiante autodidacta de programación con experiencia en Python, Django, FastAPI,
+            análisis de datos y desarrollo web (HTML y CSS). Mi enfoque se centra en la creación de soluciones
+            tecnológicas innovadoras y la mejora constante de mis habilidades. Me emociona aprender y enfrentar nuevos
+            desafíos en el mundo tecnológico</p>
+        <a href="{% static 'portfolio/cv.pdf'%}" class="btn btn-primary btn-lg rounded-0 my-3" target="_blank">
+            Downnload CV</a>
+
+    </div>
+
+
+</header>
+
+
+<div class="row my-2 text-center">
+    <h1>Mis Proyectos</h1>
+
+    {% for project in projects %}
+
+    <div class="col-md-3 p-3">
+        <div class="card bg-black card-project">
+            <img src="{{project.image.url}}" alt="{{project.title}}" class="card-img-top" />
+            <div class="card-body">
+
+                <h2 class="text-white">{{project.title}}</h2>
+                <p class="text-white">{{project.description}}</p>
+
+                {% if project.url %}
+                <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{project.url}}</a>
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <body>
+        <div class="container">
+            <header class="row bg-black d-flex justify-content-center align-items-center">
+                <div class="col-12 text-center">
+                    <h1>Contacto</h1>
+                </div>
+                <section class="col-md-4">
+                    <h2>Contáctame por correo electrónico:</h2>
+                    <p>
+                        <a href="mailto:matiasserra399@gmail.com" class="btn btn-sm btn-primary"
+                            target="_blank">matiasserra399@gmail.com</a>
+                    </p>
+                    <h3>Mi perfil en GitHub:</h3>
+                    <p>
+                        <a href="https://github.com/Matiasserra399" class="btn btn-sm btn-primary"
+                            target="_blank">GitHub/Matiasserra399</a>
+                    </p>
+    
+                    <h3>Mi perfil en LinkedIn:</h3>
+                    <p>
+                        <a href="https://www.linkedin.com/in/matias-serra-a01b1b28b" class="btn btn-sm btn-primary"
+                            target="_blank">LinkedIn/MatiasSerra</a>
+                    </p>
+                </section>
+            </header>
+        </div>
+    </body>
+            
+        
+
+
+
+
+
+    {% endfor %}
+
+    {% endblock %}
+</div>

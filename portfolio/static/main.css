@@ -1,0 +1,55 @@
+
+.bg-black {
+    background: #000;
+}
+
+.card-project:hover {
+    border: 1px solid #94bdde;
+    cursor: pointer;
+
+}
+
+h1 {
+    font-size:50px;
+    margin-bottom: 30px;
+}
+
+a {
+    margin-bottom: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+section {
+    margin: 20px;
+}
+
+h2, h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.btn {
+    background-color: #ffffff;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 0;
+}
